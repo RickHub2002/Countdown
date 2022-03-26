@@ -1,0 +1,179 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+}
+
+.top-image {
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 10px 40px;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-title {
+    color: var(--purple);
+
+    text-align: center;
+
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.timer-info-span {
+    color: var(--light-grey);
+
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.days-timer, .hours-timer, .minutes-timer, .seconds-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.days, .hours, .minutes, .seconds, .days-dots, .hours-dots, .minutes-dots {
+    font-size: 4.5rem;
+    font-weight: 500;
+
+    color: var(--black);
+}
+
+.sub-desc {
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    text-align: center;
+
+    color: var(--text-color);
+}
+
+.sub-button {
+    width: 160px;
+    height: 46px;
+
+    background-color: var(--purple);
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    border: 0;
+    border-radius: 14px;
+}
+
+.sub-button:hover {
+    cursor: pointer;
+
+    filter: brightness(110%);
+    transition: 0.2s;
+}
+
+.footer {
+    width: 100%;
+}
+
+.bottom-image {
+    width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        padding: 0;
+    }
+
+    .left-side {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    
+        padding: 10px 80px;
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .rocket {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .timer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .days-timer, .hours-timer, .minutes-timer {
+        border-bottom: 1px solid var(--text-color);
+        padding-bottom: 1rem;
+    }
+
+    .days-dots, .hours-dots, .minutes-dots {
+        display: none;
+    }
+}
